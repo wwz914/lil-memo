@@ -1,2 +1,2 @@
 <!--pages/mhistory/mhistory.wxml-->
-<text>pages/mhistory/mhistory.wxml</text>
+<view class="intro">古今</view>

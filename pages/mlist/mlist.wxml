@@ -1,2 +1,2 @@
 <!--pages/mlist/mlist.wxml-->
-<text>pages/mlist/mlist.wxml</text>
+<view class="intro">列表</view>

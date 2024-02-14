@@ -1,2 +1,2 @@
 <!--pages/mcategory/mcategory.wxml-->
-<text>pages/mcategory/mcategory.wxml</text>
+<view class="intro">分类</view>

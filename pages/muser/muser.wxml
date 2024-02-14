@@ -1,2 +1,2 @@
 <!--pages/muser/muser.wxml-->
-<text>pages/muser/muser.wxml</text>
+<view class="intro">我的</view>
