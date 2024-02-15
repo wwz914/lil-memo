@@ -1,2 +1,25 @@
 <!--pages/muser/muser.wxml-->
-<view class="intro">我的</view>
+<scroll-view scroll-y class="scrollArea">
+  <view class="container">
+    <view class="infoArea flex w100">
+      <view class="avatarArea border">
+        <image src="/images/muser/avatar.png" mode="scaleToFill"/>
+      </view>
+      <view class="nameArea">呱呱呱</view>
+    </view>
+    <view class="items w100">
+      <view class="item w100 flex jc-between">
+        <view class="left">
+          <image src="/images/muser/account.png" mode=""/>
+          账号安全
+        </view>
+      </view>
+      <view class="item w100 flex jc-between">
+        <view class="left">
+          <image src="/images/muser/lock.png" mode=""/>
+          保险箱
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,2 +1,23 @@
 <!--pages/mlist/mlist.wxml-->
-<view class="intro">列表</view>
+<scroll-view class="scrollArea" scroll-y> 
+  <view class="container">
+    <view class="searchArea flex">
+      <view class="leftIcon">
+        <image src="/images/mlist/search.png" mode="scaleToFill"/>
+      </view>
+      <view class="rightInput">
+        <input type="text" placeholder="搜索..."/>
+      </view>
+    </view>
+    <view class="listArea w100">
+      <view class="lists"></view>
+      <view class="tip" wx:if="{{tip}}">
+        <view class="content">
+          <view>长按笔记可弹出快捷菜单</view>
+          <view>点击左上角菜单按钮，可弹出侧边栏菜单</view>
+          <view class="close"><text bindtap="closeTip">×</text>点击此处不再显示该提醒</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

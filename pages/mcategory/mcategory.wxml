@@ -1,2 +1,15 @@
 <!--pages/mcategory/mcategory.wxml-->
-<view class="intro">分类</view>
+<scroll-view class="scrollArea" scroll-y>
+  <view class="container">
+    <view class="cateList"></view>
+    <view class="addArea flex w100">
+      <view class="leftInput">
+        <input type="text" placeholder="请输入新分类名称"/>
+      </view>
+      <view class="rightBtn">
+        <view>新增</view>
+      </view>
+    </view>
+    <view class="edit border">长按可编辑/删除分类</view>
+  </view>
+</scroll-view>
