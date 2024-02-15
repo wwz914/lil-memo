@@ -1,0 +1,40 @@
+/* pages/mlog/mlog.wxss */
+.container{
+  padding: 64rpx 56rpx;
+}
+.item{
+  color: #8B8E9B;
+  height: 64rpx;
+  align-items: center;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 48rpx;
+  border-bottom: 1px solid #F0F0F0;
+}
+.item image{
+  width: 40rpx;
+  height: 40rpx;
+  display: inline-block;
+}
+.item input{
+  flex: 1;
+  margin-left: 16rpx;
+}
+
+button{
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 100% !important;
+  box-shadow: 0px 1px 7px 0px #E2E5F0;
+}
+.blue{
+  background-color: #648CEB;
+  box-shadow: 0px 1px 7px 0px #648CEB;
+}
+
+.tip{
+  color: #648CEB;
+  font-size: 24rpx;
+}

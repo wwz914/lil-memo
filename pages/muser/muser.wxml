@@ -8,18 +8,25 @@
       <view class="nameArea">呱呱呱</view>
     </view>
     <view class="items w100">
-      <view class="item w100 flex jc-between">
+      <view class="item w100 flex jc-between" bind:tap="toAccount">
         <view class="left">
           <image src="/images/muser/account.png" mode=""/>
           账号安全
         </view>
       </view>
-      <view class="item w100 flex jc-between">
+      <view class="item w100 flex jc-between" bind:tap="toDialog">
         <view class="left">
           <image src="/images/muser/lock.png" mode=""/>
           保险箱
         </view>
       </view>
+    </view>
+  </view>
+  <view class="dialogMask flex" wx:if="{{dialog}}" bind:tap="closeDialog">
+    <view class="dialog">
+      <input type="password" placeholder="请输入你的密码"/>
+      <input type="password" placeholder="请再次输入你的密码"/>
+      <button size="mini">确定</button>
     </view>
   </view>
 </scroll-view>

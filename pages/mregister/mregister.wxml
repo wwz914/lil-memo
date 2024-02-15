@@ -1,0 +1,19 @@
+<!--pages/mregister/mregister.wxml-->
+<view class="container">
+  <view class="avatar">
+    <image src="/images/muser/avatar.png" mode=""/>
+  </view>
+  <view class="item flex w100">
+    <image src="/images/nick.png" mode="scaleToFill"/>
+    <input placeholder="请输入昵称"/>
+  </view>
+  <view class="item flex w100">
+    <image src="/images/user.png" mode="scaleToFill"/>
+    <input placeholder="请输入您的账号"/>
+  </view>
+  <view class="item flex w100">
+    <image src="/images/pwd.png" mode="scaleToFill"/>
+    <input type="password" placeholder="请输入您的密码"/>
+  </view>
+  <button style="margin: 30rpx 0;" bind:tap="register">注册</button>
+</view>

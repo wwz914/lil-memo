@@ -1,0 +1,14 @@
+/* pages/muser/maccount.wxss */
+.accountArea{
+  background-color: #fff;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.accountArea .account{
+  height: 84rpx;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 1px solid #F3F3F3;
+}

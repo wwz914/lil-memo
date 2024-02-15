@@ -1,0 +1,12 @@
+<!--pages/muser/maccount.wxml-->
+<view class="container">
+  <view class="accountArea w100">
+    <view class="account myAccount w100 flex jc-between">
+      <text>手机账号</text>
+      <text>15005988063</text>
+    </view>
+    <view class="account myAccount w100 flex">
+      <text bindtap="logout">注销账号</text>
+    </view>
+  </view>
+</view>

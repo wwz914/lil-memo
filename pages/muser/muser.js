@@ -1,4 +1,7 @@
 Component({
+  data:{
+    dialog:false,
+  },
   pageLifetimes: {
     show() {
       if (typeof this.getTabBar === 'function' &&
@@ -7,6 +10,26 @@ Component({
           selected: 3
         })
       }
+    }
+  },
+  methods:{
+    // 跳转至账号页面
+    toAccount(){
+      wx.switchTab({
+        url: '/pages/muser/maccount'
+      })
+    },
+    // 打开加密弹窗
+    toDialog(){
+      this.setData({
+        dialog:true,
+      })
+    },
+    // 关闭加密弹窗
+    closeDialog(){
+      this.setData({
+        dialog:false,
+      })
     }
   }
 })

@@ -1,9 +1,12 @@
 {
   "pages": [
+    "pages/mregister/mregister",
     "pages/mlist/mlist",
     "pages/mcategory/mcategory",
     "pages/mhistory/mhistory",
-    "pages/muser/muser"
+    "pages/muser/muser",
+    "pages/muser/maccount",
+    "pages/mlog/mlog"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -36,6 +39,12 @@
       },
       {
         "pagePath": "pages/muser/muser",
+        "iconPath": "images/muser.png",
+        "selectedIconPath": "images/s_muser.png",
+        "text": "我的"
+      },
+      {
+        "pagePath": "pages/muser/maccount",
         "iconPath": "images/muser.png",
         "selectedIconPath": "images/s_muser.png",
         "text": "我的"

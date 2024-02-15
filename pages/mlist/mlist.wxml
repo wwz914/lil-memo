@@ -6,7 +6,7 @@
         <image src="/images/mlist/search.png" mode="scaleToFill"/>
       </view>
       <view class="rightInput">
-        <input type="text" placeholder="搜索..."/>
+        <input placeholder="搜索..."/>
       </view>
     </view>
     <view class="listArea w100">
