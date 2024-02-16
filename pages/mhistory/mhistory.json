@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "古今",
+  "navigationBarTextStyle":"white"
 }
