@@ -1,13 +1,30 @@
 // pages/mregister/mregister.js
+import {register}from '../../api/user'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    regForm:{
+      name: undefined,
+      username: undefined,
+      password: undefined
+    }
   },
-  register(){},
+  commonInputHandler(e){
+    const {target,key}=e.currentTarget.dataset
+    this.setData({
+      [`${target}.${key}`]:e.detail.value
+    })
+  },
+  register(data){
+    register(data).then(res=>{
+      console.log(res);
+    }).catch(err=>{
+      console.log(err);
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

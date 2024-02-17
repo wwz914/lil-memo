@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/muser/muser",
+    "pages/mlog/mlog",
+    "pages/mregister/mregister",
     "pages/mlist/mlist",
     "pages/mcategory/mcategory",
     "pages/mhistory/mhistory",
-    "pages/muser/muser",
-    "pages/muser/maccount",
-    "pages/mregister/mregister",
-    "pages/mlog/mlog"
+    "pages/muser/maccount"
   ],
   "window": {
     "navigationBarTextStyle": "black",

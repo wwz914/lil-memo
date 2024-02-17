@@ -1,6 +1,8 @@
+import {getInfo}from '../../api/user'
 Component({
   data:{
     dialog:false,
+    info:{}
   },
   pageLifetimes: {
     show() {
@@ -29,6 +31,15 @@ Component({
     closeDialog(){
       this.setData({
         dialog:false,
+      })
+    }
+  },
+  lifetimes:{
+    created(){
+      getInfo().then(res=>{
+        this.setData({
+          info:res.data
+        })
       })
     }
   }

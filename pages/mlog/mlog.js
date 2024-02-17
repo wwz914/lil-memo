@@ -1,18 +1,38 @@
 // pages/mlog/mlog.js
+import {login}from '../../api/user'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    loginForm:{
+      username:undefined,
+      password:undefined
+    }
   },
   toReg(){
     wx.navigateTo({
       url: 'url',
     })
   },
-  login(){},
+  commonInputHandler(e){
+    const {target,key}=e.currentTarget.dataset
+    this.setData({
+      [`${target}.${key}`]:e.detail.value
+    })
+  },
+  login(){
+    login(this.data.loginForm).then(res=>{
+      console.log(res);
+      wx.setStorageSync('token', res.data)
+      wx.switchTab({
+        url: '/pages/mlist/mlist',
+      })
+    }).catch(err=>{
+      console.log(err);
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -5,7 +5,7 @@
       <view class="avatarArea border">
         <image src="/images/muser/avatar.png" mode="scaleToFill"/>
       </view>
-      <view class="nameArea">呱呱呱</view>
+      <view class="nameArea">{{info.name}}</view>
     </view>
     <view class="items w100">
       <view class="item w100 flex jc-between" bind:tap="toAccount">

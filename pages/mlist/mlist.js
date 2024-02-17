@@ -1,3 +1,5 @@
+import {getCate} from '../../api/classification'
+
 Component({
   data:{
     tip:true
@@ -17,6 +19,15 @@ Component({
           selected: 0
         })
       }
+    }
+  },
+  lifetimes:{
+    created(){
+      getCate().then(res=>{
+        console.log(res.data);
+      }).catch(err=>{
+        console.log(err);
+      })
     }
   }
 })

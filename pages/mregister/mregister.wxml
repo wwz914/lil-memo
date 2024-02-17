@@ -5,15 +5,15 @@
   </view>
   <view class="item flex w100">
     <image src="/images/nick.png" mode="scaleToFill"/>
-    <input placeholder="请输入昵称"/>
+    <input placeholder="请输入昵称" data-target="regForm" data-key="name" bindinput="commonInputHandler"/>
   </view>
   <view class="item flex w100">
     <image src="/images/user.png" mode="scaleToFill"/>
-    <input placeholder="请输入您的账号"/>
+    <input placeholder="请输入您的账号" data-target="regForm" data-key="username" bindinput="commonInputHandler"/>
   </view>
   <view class="item flex w100">
     <image src="/images/pwd.png" mode="scaleToFill"/>
-    <input type="password" placeholder="请输入您的密码"/>
+    <input type="password" placeholder="请输入您的密码" data-target="regForm" data-key="password" bindinput="commonInputHandler"/>
   </view>
   <button bind:tap="register">注册</button>
 </view>
