@@ -1,5 +1,5 @@
 // pages/mregister/mregister.js
-import {register}from '../../api/user'
+import {register,login}from '../../api/user'
 Page({
 
   /**
@@ -18,9 +18,20 @@ Page({
       [`${target}.${key}`]:e.detail.value
     })
   },
-  register(data){
-    register(data).then(res=>{
+  register(){
+    register(this.data.regForm).then(res=>{
       console.log(res);
+      if(res.code==200){
+        login(this.data.regForm).then(res=>{
+          console.log(res);
+          wx.setStorageSync('token', res.data)
+          wx.switchTab({
+            url: '/pages/mlist/mlist',
+          })
+        }).catch(err=>{
+          console.log(err);
+        })
+      }
     }).catch(err=>{
       console.log(err);
     })

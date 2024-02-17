@@ -10,7 +10,19 @@
       </view>
     </view>
     <view class="listArea w100">
-      <view class="lists"></view>
+      <view class="lists">
+        <view class="list flex jc-between" wx:for="{{data}}" wx:for-item="item" wx:for-index="index">
+          <view class="list-left h100">
+            <view class="title">{{item.title}}</view>
+            <view class="date">{{item.date}}</view>
+          </view>
+          <view class="list-right">
+            <view class="op">
+              <image src="../../images/mlist/op.png" mode="scaleToFill"/>
+            </view>
+          </view>
+        </view>
+      </view>
       <view class="tip" wx:if="{{tip}}">
         <view class="content">
           <view>长按笔记可弹出快捷菜单</view>
