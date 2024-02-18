@@ -1,22 +1,16 @@
-import {getCate} from '../../api/classification'
-
+import {getLists}from '../../api/list'
 Component({
   data:{
     tip:true,
-    opIndex:undefined,
+    show:false,
     data:[
-      {
-        title:'OKOK',
-        date:'2022年8月17日 中午12:02',
-        content:'...'
-      },
-      {
-        title:'你好你好',
-        date:'2022年8月17日 中午12:00',
-        content:'...'
-      },
+      
     ],
-    opArr:['置顶','删除','加密','分类','复制','取消']
+    queryForm:{
+      pageNum:1,
+      pageSize:100,
+      recycleBin:0,
+    }
   },
   methods:{
     closeTip(){
@@ -24,12 +18,21 @@ Component({
         tip:false
       })
     },
-    bindOpPickerChange(e){
+    onClose(){
       this.setData({
-        opIndex:e.detail.value
+        show:false
       })
-      console.log(this.data.opArr[this.data.opIndex]);
-    }
+    },
+    showPopup(){
+      this.setData({
+        show:true
+      })
+    },
+    toTop(){},
+    remove(){},
+    encrypt(){},
+    classify(){},
+    copy(){}
   },
   pageLifetimes: {
     show() {
@@ -43,6 +46,11 @@ Component({
   },
   lifetimes:{
     created(){
+      getLists(this.data.queryForm).then(res=>{
+        this.setData({
+          data:res.rows
+        })
+      })
       // getCate().then(res=>{
       //   console.log(res.data);
       // }).catch(err=>{

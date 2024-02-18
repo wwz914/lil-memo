@@ -1,13 +1,27 @@
 <!--pages/mcategory/mcategory.wxml-->
 <scroll-view class="scrollArea" scroll-y>
   <view class="container">
-    <view class="cateList"></view>
+    <view class="cateList w100">
+      <van-cell 
+        class="cate"
+        wx:for="{{data}}" 
+        wx:for-item="item" 
+        title="{{item.classifyName}}" 
+        value="{{item.noteCount}}" custom-class="cate-class" 
+        is-link>
+        <van-icon 
+          slot="icon" 
+          name="/images/mcate/file.png" class="file-icon" 
+          size="40rpx">
+        </van-icon>
+      </van-cell>
+    </view>
     <view class="addArea flex w100">
       <view class="leftInput">
         <input placeholder="请输入新分类名称"/>
       </view>
       <view class="rightBtn">
-        <view>新增</view>
+        <view bind:tap="addCate">新增</view>
       </view>
     </view>
     <view class="edit border">长按可编辑/删除分类</view>

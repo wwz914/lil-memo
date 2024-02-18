@@ -56,3 +56,22 @@
   width: 9rpx;
   height: 36rpx;
 }
+
+.op-popup>view{
+  border-radius: 10rpx;
+  height:fit-content;
+  background-color: #F7F7F7;
+}
+.pop-ops{
+  margin-bottom: 16rpx;
+}
+.pop-op{
+  height: 106rpx;
+  line-height: 106rpx;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid #E5E5E5;
+}
+.pop-op:hover{
+  background-color: #E5E5E5;
+}

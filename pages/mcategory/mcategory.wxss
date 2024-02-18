@@ -41,3 +41,15 @@
   border-radius: 4px;
   margin: 24rpx 16rpx;
 }
+
+.cate .cate-left image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.file-icon{
+  margin-right: 22rpx;
+}
+.cate-class{
+  border-bottom: 1px solid #F0F0F0;
+}

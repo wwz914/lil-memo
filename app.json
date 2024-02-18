@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/mcategory/mcategory",
     "pages/mlist/mlist",
+    "pages/mlog/mlog",
     "pages/mregister/mregister",
     "pages/muser/muser",
-    "pages/mlog/mlog",
-    "pages/mcategory/mcategory",
     "pages/mhistory/mhistory",
     "pages/muser/maccount"
   ],
