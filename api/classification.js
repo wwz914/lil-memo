@@ -6,3 +6,26 @@ export function getCate(data){
     method:'GET',
   })
 }
+
+export function add(data){
+  return instance({
+    url:'/note-api/classify',
+    method:'POST',
+    data
+  })
+}
+
+export function remove(classifyId){
+  return instance({
+    url:`/note-api/classify/${classifyId}`,
+    method:'DELETE',
+  })
+}
+
+export function edit(data){
+  return instance({
+    url:'/note-api/classify',
+    method:'PUT',
+    data
+  })
+}

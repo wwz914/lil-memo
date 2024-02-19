@@ -1,0 +1,34 @@
+/* pages/medit/medit.wxss */
+.scrollArea {
+  flex: 1;
+  background-color: #F8F8F8;
+  height: 100vh;
+  overflow-y: hidden;
+}
+.container{
+  padding: 32rpx 40rpx;
+  box-sizing: border-box;
+  align-items: end;
+}
+
+.title{
+  color: #666666;
+  padding-bottom: 8rpx;
+  margin-bottom: 24rpx;
+  border-bottom: 1px solid #F0F0F0;
+}
+textarea{
+  font-size: 14px;
+  height: 100%;
+  color: #333333;
+}
+.floatWindow{
+  position: absolute;
+  bottom: 2%;
+  right: 4%;
+  z-index: 2;
+}
+.floatWindow image{
+  width: 88rpx;
+  height: 88rpx;
+}

@@ -1,19 +1,21 @@
 {
   "pages": [
-    "pages/mcategory/mcategory",
     "pages/mlist/mlist",
     "pages/mlog/mlog",
+    "pages/mcategory/mcategory",
+    "pages/medit/medit",
     "pages/mregister/mregister",
-    "pages/muser/muser",
     "pages/mhistory/mhistory",
-    "pages/muser/maccount"
+    "pages/muser/muser",
+    "pages/muser/maccount",
+    "pages/mcategory/mlist"
   ],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "Weixin",
     "navigationBarBackgroundColor": "#648CEB",
     "backgroundColor": "#F8F8F8"
-},
+  },
   "tabBar": {
     "custom": true,
     "selectedColor": "#7395DD",

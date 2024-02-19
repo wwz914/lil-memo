@@ -1,9 +1,8 @@
 {
   "usingComponents": {
     "van-cell": "@vant/weapp/cell/index",
-    "van-icon": "@vant/weapp/icon/index",
     "van-popup": "@vant/weapp/popup/index"
   },
-  "navigationBarTitleText": "分类",
+  "navigationBarTitleText": "...",
   "navigationBarTextStyle":"white"
 }

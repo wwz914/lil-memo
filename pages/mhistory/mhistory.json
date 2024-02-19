@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index"
+  },
   "navigationBarTitleText": "古今",
   "navigationBarTextStyle":"white"
 }

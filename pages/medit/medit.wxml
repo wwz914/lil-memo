@@ -1,0 +1,23 @@
+<!--pages/medit/medit.wxml-->
+<scroll-view scroll-y class="scrollArea">
+  <view class="container">
+    <input 
+      class="title w100" 
+      value="{{noteForm.noteTitle}}"
+      placeholder="请输入你的标题" 
+      data-target="noteForm"
+      data-key="noteTitle"
+      bindinput="commonInputHandler"
+    />
+    <textarea 
+      value="{{noteForm.noteContent}}" 
+      placeholder="请输入正文内容"
+      data-target="noteForm"
+      data-key="noteContent"
+      bindinput="commonInputHandler"
+    />
+    <view class="floatWindow" bind:tap="addnote">
+        <image src="/images/medit/ok.png" mode="scaleToFill"/>
+      </view>
+  </view>
+</scroll-view>

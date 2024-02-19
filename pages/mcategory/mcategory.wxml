@@ -8,6 +8,9 @@
         wx:for-item="item" 
         title="{{item.classifyName}}" 
         value="{{item.noteCount}}" custom-class="cate-class" 
+        bind:click="getList"
+        bind:longpress="opCate"
+        data-item="{{item}}"
         is-link>
         <van-icon 
           slot="icon" 
@@ -15,15 +18,44 @@
           size="40rpx">
         </van-icon>
       </van-cell>
+      <van-popup 
+        class="cate-popup"
+        show="{{show}}" 
+        bind:close="onClose" 
+        position="bottom" 
+        safe-area-tab-bar
+      >
+        <view class="pop-ops">
+          <view class="pop-op" bind:tap="toEdit">编辑</view>
+          <view class="pop-op" bind:tap="removeNote">删除</view>
+        </view>
+        <view class="pop-op" bind:tap="onClose">取消</view>
+      </van-popup>
     </view>
     <view class="addArea flex w100">
       <view class="leftInput">
-        <input placeholder="请输入新分类名称"/>
+        <input 
+          placeholder="请输入新分类名称" 
+          bindinput="commonInputHandler"
+          data-target="classForm" 
+          data-key="classifyName"
+        />
       </view>
       <view class="rightBtn">
         <view bind:tap="addCate">新增</view>
       </view>
     </view>
     <view class="edit border">长按可编辑/删除分类</view>
+    <view class="dialogMask flex" wx:if="{{dialog}}" bind:tap="closeDialog">
+    <view class="dialog">
+      <input 
+        placeholder="请输入分类名"
+        data-target="classForm" 
+        data-key="classifyName" 
+        bindinput="commonInputHandler"
+      />
+      <button size="mini" bind:tap="editCate">确定</button>
+    </view>
+  </view>
   </view>
 </scroll-view>

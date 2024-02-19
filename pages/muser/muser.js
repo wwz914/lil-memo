@@ -32,6 +32,13 @@ Component({
       this.setData({
         dialog:false,
       })
+    },
+    toLogin(){
+      if(!wx.getStorageSync('token')){
+        wx.navigateTo({
+          url: '/pages/mlog/mlog',
+        })
+      }
     }
   },
   lifetimes:{

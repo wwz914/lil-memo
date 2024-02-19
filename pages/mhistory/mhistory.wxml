@@ -1,4 +1,36 @@
 <!--pages/mhistory/mhistory.wxml-->
 <scroll-view scroll-y class="scrollArea">
-  古今
+  <scroll-view scroll-y>
+    <view class="caontainer">
+      <van-datetime-picker
+        type="date"
+        value="{{currentDate}}"
+        bind:input="onInput"
+        min-date="{{minDate}}"  
+        formatter="{{formatter}}"  
+        visible-item-count="1"
+        show-toolbar="{{false}}"
+        item-height="{{46}}"
+        active-class="a"
+      />
+      <view class="items">
+        <view class="item flex jc-between">
+          <view class="title">节日</view>
+          <view class="content">content</view>
+        </view>
+        <view class="item flex jc-between">
+          <view class="title">生日</view>
+          <view class="content">content</view>
+        </view>
+        <view class="item flex jc-between">
+          <view class="title">961</view>
+          <view class="content">content</view>
+        </view>
+        <view class="item flex jc-between">
+          <view class="title">1642</view>
+          <view class="content">content</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
 </scroll-view>

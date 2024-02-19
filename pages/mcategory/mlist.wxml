@@ -1,3 +1,4 @@
+<!--pages/mcategory/mlist.wxml-->
 <!--pages/mlist/mlist.wxml-->
 <scroll-view class="scrollArea" scroll-y> 
   <view class="container">
@@ -11,20 +12,13 @@
     </view>
     <view class="listArea w100">
       <view class="lists">
-        <view 
-          class="list flex jc-between" 
-          wx:for="{{data}}" 
-          wx:for-item="item" 
-          bind:tap="editNote"
-          data-item="{{item}}"
-          wx:key="{{item.noteTitle}}">
+        <view class="list flex jc-between" wx:for="{{data}}" wx:for-item="item" wx:key="{{item.noteTitle}}">
           <view class="list-left h100">
             <view class="title">{{item.noteTitle}}</view>
             <view class="date">{{item.createTime}}</view>
           </view>
-          <view class="list-right flex" catch:tap="showPopup" data-item="{{item}}">
-            <view class="top" wx:if="{{item.top==1}}"><van-icon name="label-o"/></view>
-            <vant-cell class="op">
+          <view class="list-right">
+            <vant-cell class="op" bind:tap="showPopup">
               <image src="../../images/mlist/op.png" mode="scaleToFill"/>
             </vant-cell>
             <van-popup 
@@ -32,12 +26,11 @@
               show="{{show}}" 
               bind:close="onClose" 
               position="bottom"
-              safe-area-tab-bar
             >
               <view class="pop-ops">
                 <view class="pop-op" bind:tap="toTop">置顶</view>
                 <view class="pop-op" bind:tap="remove">删除</view>
-                <view class="pop-op" bind:tap="encrypt">加密</view> 
+                <view class="pop-op" bind:tap="encrypt">加密</view>
                 <view class="pop-op" bind:tap="classify">分类</view>
                 <view class="pop-op" bind:tap="copy">复制</view>
               </view>
@@ -54,21 +47,5 @@
         </view>
       </view>
     </view>
-    <view class="floatWindows">
-      <view class="floatWindow" bind:tap="refresh">
-        <image src="/images/mlist/refresh.png" mode="scaleToFill"/>
-      </view>
-      <view class="floatWindow" bind:tap="addnote">
-        <image src="/images/mlist/new.png" mode="scaleToFill"/>
-      </view>
-    </view>
-
-
-    <view class="dialogMask flex" wx:if="{{cateDialog}}" bind:tap="closeDialog">
-    <view class="dialog">
-      <van-picker columns="{{ columns }}" bind:change="onChange" visible-item-count="2"/>
-      <button size="mini">确定</button>
-    </view>
-  </view>
   </view>
 </scroll-view>

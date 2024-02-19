@@ -2,7 +2,7 @@
 <scroll-view scroll-y class="scrollArea">
   <view class="container">
     <view class="infoArea flex w100">
-      <view class="avatarArea border">
+      <view class="avatarArea border" bind:tap="toLogin">
         <image src="/images/muser/avatar.png" mode="scaleToFill"/>
       </view>
       <view class="nameArea">{{info.name}}</view>
