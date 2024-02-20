@@ -135,7 +135,6 @@ Component({
         })
       }),
       getCate().then(res=>{
-        console.log(res);
         this.setData({
           columns:res.data.map(e=>e.classifyName)
         })
