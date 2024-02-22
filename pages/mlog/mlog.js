@@ -13,7 +13,7 @@ Page({
   },
   toReg(){
     wx.navigateTo({
-      url: 'url',
+      url: '/pages/mregister/mregister',
     })
   },
   commonInputHandler(e){

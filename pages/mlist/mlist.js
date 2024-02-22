@@ -122,14 +122,13 @@ Component({
       getLists(this.data.queryForm).then(res=>{
         this.setData({
           data:res.rows
-        })
+        }) 
       })
     }
   },
   lifetimes:{
     created(){
       getLists(this.data.queryForm).then(res=>{
-        console.log(res.rows);
         this.setData({
           data:res.rows
         })
